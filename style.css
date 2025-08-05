@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background: #222;
+}
+
+#strength {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: mediumspringgreen;
+  font-size: 3.3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 250, 154, 0.4);
+  letter-spacing: 1px;
+  transition: color 300ms ease;
+}
+
+h1:hover {
+  color: #00ffae;
+}
+
+.description {
+  color: mediumspringgreen;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  transition: color 300ms ease;
+}
+
+.description:hover {
+  color: #00ffae;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  all: unset;
+  width: 250px;
+  padding: 0.3em 0.9em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  font-size: 1.2em;
+  font-family: inherit;
+  font-size: 1.4em;
+  color: mediumspringgreen;
+  font-weight: 500;
+  background-color: transparent;
+  transition: border 300ms, color 300ms, background 300ms;
+}
+
+.input::placeholder {
+  color: mediumspringgreen;
+  opacity: 0.6;
+  transition: color 300ms;
+}
+
+.input:focus {
+  border-color: rgb(0, 250, 154);
+  color: #111;
+  background-color: rgb(0, 250, 154, 0.1);
+}
+
+.input:focus::placeholder {
+  color: mediumspringgreen;
+}
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.4em 1em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-family: inherit;
+  font-size: 1.3em;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button:hover {
+  color: #212121;
+  background-color: mediumspringgreen;
+  font-weight: 700;
+}
+
+.button:active {
+  background-color: mediumspringgreen;
+  color: #111;
+  font-weight: 700;
+}
+
+button p {
+  margin: 0;
+  transition: color 300ms;
+}
+
+.bar {
+  width: 300px;
+  height: 6px;
+  background: #555;
+  border-radius: 3px;
+  margin: 0 auto 10px auto;
+  transition: background 0.3s;
+}
+.bar-fill {
+  width: 0%;
+  height: 100%;
+  background: red;
+  border-radius: 3px;
+  transition: width 0.3s, background 0.3s;
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .input {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .button {
+    width: 80%;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+}
+
+/* 480 */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .input,
+  .button {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 0.4em;
+  }
+}
